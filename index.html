@@ -13,6 +13,64 @@
 <body>
     <div class="container">
         <h3>Shopping Cart</h3>
+        <hr>
+        <h4>Products</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl.</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Product 1</td>
+                    <td>100</td>
+                    <td><button class="addButton1">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Product 2</td>
+                    <td>200</td>
+                    <td><button class="addButton2">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Product 3</td>
+                    <td>300</td>
+                    <td><button class="addButton3">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Product 4</td>
+                    <td>400</td>
+                    <td><button class="addButton4">Add to Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h4>Your Cart</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl.</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Remove from Cart</th>
+                </tr>
+            </thead>
+            <tbody class="cartRows">
+                <tr>
+                    <td>4</td>
+                    <td>Product 4</td>
+                    <td>400</td>
+                    <td><button>Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="js/script.js"></script>
 </body>
