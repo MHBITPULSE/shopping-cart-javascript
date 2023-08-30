@@ -13,12 +13,12 @@ addButton2.addEventListener("click", addToCart)
 addButton3.addEventListener("click", addToCart)
 addButton4.addEventListener("click", addToCart)
 
+let remove_Buttons = []
+
 
 //Define Functions
 
 function addToCart(e) {
-    console.log(e.target.className)
-
 
     // Create a row using the inserRow() method and
     // specify the index where you want to add the row
@@ -41,25 +41,36 @@ function addToCart(e) {
             c2.innerText = "Product 1"
             c3.innerText = 100
             button.className = `btn_remove${cartTable.rows.length - 1}`;
+            remove_Buttons.push(button)
+            remove_Buttons[remove_Buttons.length - 1].addEventListener("click", removeFromCart)
             break;
         case "addButton2":
             c2.innerText = "Product 2"
             c3.innerText = 200
             button.className = `btn_remove${cartTable.rows.length - 1}`;
+            remove_Buttons.push(button);
+            remove_Buttons[remove_Buttons.length - 1].addEventListener("click", removeFromCart)
             break;
         case "addButton3":
             c2.innerText = "Product 3"
             c3.innerText = 300
             button.className = `btn_remove${cartTable.rows.length - 1}`;
+            remove_Buttons.push(button);
+            remove_Buttons[remove_Buttons.length - 1].addEventListener("click", removeFromCart)
             break;
         case "addButton4":
             c2.innerText = "Product 4"
             c3.innerText = 400
             button.className = `btn_remove${cartTable.rows.length - 1}`;
+            remove_Buttons.push(button);
+            remove_Buttons[remove_Buttons.length - 1].addEventListener("click", removeFromCart)
             break;
-
         default:
             break;
+    }
+
+    function removeFromCart(e) {
+        e.target.parentElement.parentElement.remove()
     }
 
     // Add data to c1 and c2
@@ -67,5 +78,4 @@ function addToCart(e) {
 
     c4.append(button);
 
-    console.log(cartTable)
 }
